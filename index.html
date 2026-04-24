@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StoryBuddy</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section id="start-screen" class="screen active" aria-labelledby="start-title">
+        <div class="top-bar">
+          <h1 id="start-title">StoryBuddy</h1>
+          <div class="top-actions" aria-hidden="true">
+            <span class="upgrade-pill">Parent</span>
+            <span class="gear-shape"></span>
+          </div>
+        </div>
+
+        <div class="dashboard-grid">
+          <button id="start-button" class="feature-card orange-card">
+            <span class="feature-title">Start Luna's Story</span>
+            <span class="fox-art" aria-hidden="true">
+              <span class="fox-head"></span>
+              <span class="fox-body"></span>
+              <span class="fox-tail"></span>
+            </span>
+            <span class="plus-badge" aria-hidden="true">+</span>
+          </button>
+
+          <div class="feature-card blue-card wizard-card">
+            <span class="feature-title">Listen and Follow</span>
+            <span class="wizard-art" aria-hidden="true"></span>
+          </div>
+
+          <div class="feature-card blue-card robot-card">
+            <span class="feature-title">Parent Insights</span>
+            <span class="robot-art" aria-hidden="true"></span>
+          </div>
+        </div>
+
+        <div class="discover-header">
+          <h2>Tales to Discover</h2>
+          <p>Short adventures children can listen to and choose from.</p>
+        </div>
+
+        <div class="story-shelf" aria-hidden="true">
+          <article class="shelf-card">
+            <div class="shelf-image fox-night"></div>
+            <div class="shelf-info">
+              <h3>The Little Lantern Fox</h3>
+              <span>Empathy</span>
+              <span class="play-dot"></span>
+            </div>
+          </article>
+
+          <article class="shelf-card">
+            <div class="shelf-image forest-friend"></div>
+            <div class="shelf-info">
+              <h3>Luna's Park Map</h3>
+              <span>Kindness</span>
+              <span class="play-dot"></span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="story-screen" class="screen" aria-live="polite">
+        <div class="top-bar compact-bar">
+          <h2>StoryBuddy</h2>
+          <span class="story-badge">Audio Story</span>
+        </div>
+
+        <div class="progress-wrap" aria-label="Story progress">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+
+        <article class="story-card">
+          <p id="step-label" class="step-label"></p>
+          <div id="story-illustration" class="mini-scene" aria-hidden="true"></div>
+          <h2 id="story-title"></h2>
+          <p id="story-text" class="story-text"></p>
+
+          <div class="audio-controls" aria-label="Story audio controls">
+            <button id="listen-button" class="audio-button">&#9654; Listen</button>
+            <button id="stop-audio-button" class="audio-button secondary-audio">&#9632; Stop</button>
+          </div>
+
+          <div id="question-area" class="question-area hidden">
+            <p id="question-text" class="question-text"></p>
+            <div id="answer-buttons" class="answer-buttons"></div>
+          </div>
+
+          <button id="next-button" class="big-button">Next</button>
+        </article>
+      </section>
+
+      <section id="summary-screen" class="screen" aria-labelledby="summary-title">
+        <div class="top-bar compact-bar">
+          <h2>StoryBuddy</h2>
+          <span class="summary-medal" aria-hidden="true"></span>
+        </div>
+
+        <div class="summary-hero">
+          <span class="summary-star" aria-hidden="true"></span>
+          <p class="eyebrow">Story complete</p>
+          <h2 id="summary-title">Great job helping Luna!</h2>
+        </div>
+
+        <p id="child-message" class="child-message"></p>
+
+        <div class="parent-box">
+          <h3>Parent Insight Summary</h3>
+          <p id="parent-summary"></p>
+        </div>
+
+        <div class="parent-box choices-box">
+          <h3>Story Choices</h3>
+          <ul id="choice-list"></ul>
+        </div>
+
+        <button id="restart-button" class="big-button">Restart</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
